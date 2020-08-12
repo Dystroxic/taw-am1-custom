@@ -10,7 +10,7 @@ class CfgPatches
 		authors[] = { "Dystroxic" };
 		url = QUOTE(URL);
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"taw_am1_custom_main", "A3_Data_F", "A3_Weapons_F", "ace_arsenal", "ace_grenades", "rhs_c_weapons", "rhsusf_c_weapons" };
+		requiredAddons[] = {"taw_am1_custom_main", "A3_Data_F", "A3_Weapons_F", "A3_Data_F_Sams_Loadorder", "ace_arsenal", "ace_grenades", "rhs_c_weapons", "rhsusf_c_weapons" };
 		units[] = {};
 		weapons[] = {};
 	};
@@ -19,3 +19,4 @@ class CfgPatches
 #include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgCloudlets.hpp"
+#include "CfgMoves.hpp"
