@@ -1,6 +1,3 @@
-systemChat "Running XEH_preInit.sqf";
-diag_log "Running XEH_preInit.sqf";
-
 // A function to be run to process new values for the "taw_am1_global_arsenal_blacklist" setting
 private _taw_am1_global_arsenal_blacklist_change_script = {
 	// Ensure it's been parsed to array format (not string)
@@ -32,9 +29,6 @@ private _taw_am1_global_arsenal_blacklist_change_script = {
 	_taw_am1_global_arsenal_blacklist_change_script
 ] call CBA_fnc_addSetting;
 
-systemChat "CBA setting added";
-diag_log "CBA setting added";
-
 // Run the script to process the setting to handle the initial value
 taw_am1_global_arsenal_blacklist call _taw_am1_global_arsenal_blacklist_change_script;
 
@@ -52,3 +46,6 @@ taw_am1_handler_ace_arsenal_blacklist = ["ace_arsenal_displayOpened", {
 		};
 	} foreach ace_arsenal_virtualItems;
 }] call CBA_fnc_addEventHandler;
+
+// Include the file that specifies default loadouts
+#include "loadouts.sqf"
