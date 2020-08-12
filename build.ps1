@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$mod_name = "taw_am1_custom"
+$mod_name = "taw_am1"
 
 $version = Read-Host "Version Number"
 

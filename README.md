@@ -1,2 +1,2 @@
-# taw-am1-custom
+# taw-am1-mod
 Custom mechanics and assets for TAW AM1

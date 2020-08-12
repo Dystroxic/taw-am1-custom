@@ -11,7 +11,7 @@ class CfgPatches
 		url = QUOTE(URL);
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			"taw_am1_custom_main", // Main addon for this mod, which includes settings and macros
+			"taw_am1_main", // Main addon for this mod, which includes settings and macros
 			"A3_Data_F", 
 			"A3_Weapons_F", 
 			"A3_Data_F_Sams_Loadorder", // For patching animations (swim and ladder speed)

@@ -9,7 +9,7 @@ class CfgPatches
 		authors[] = { "Dystroxic", "Constance", "Blackbox", "SillyGhillie" };
 		url = QUOTE(URL);
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = { "taw_am1_custom_main" };
+		requiredAddons[] = { "taw_am1_main" };
 		units[] = {};
 		weapons[] = {};
 	};
