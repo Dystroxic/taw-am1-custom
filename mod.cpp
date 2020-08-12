@@ -1,0 +1,12 @@
+﻿name = "TAW AM1 Custom";
+picture = "taw.paa";
+description = "Custom mechanics and equipment for TAW AM1.";
+logo = "taw.paa";
+logoOver = "taw.paa";
+tooltip = "TAW AM1 Custom";
+tooltipOwned = "TAW AM1 Custom";
+overview = "Custom mechanics and equipment for TAW AM1.";
+author = "Dystroxic, SillyGhille, Blackbox";
+overviewPicture = "taw.paa";
+overviewText = "TAW AM1 Custom";
+overviewFootnote = "";
