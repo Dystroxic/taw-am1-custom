@@ -6,11 +6,13 @@ class CfgPatches
 	{
 		name = COMPONENT_NAME;
 		author = "TAW AM1";
-		authors[] = { "Dystroxic" };
+		authors[] = {"Dystroxic"};
 		url = QUOTE(URL);
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {};
+		requiredAddons[] = {"cba_main"};
 		units[] = {};
 		weapons[] = {};
 	};
 };
+
+#include "Cfg3DEN.hpp"

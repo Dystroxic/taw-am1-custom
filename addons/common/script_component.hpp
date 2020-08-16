@@ -1,5 +1,5 @@
-#define COMPONENT mechanics
-#define COMPONENT_BEAUTIFIED Mechanics
+#define COMPONENT common
+#define COMPONENT_BEAUTIFIED Common
 #include "..\main\script_mod.hpp"
 
 // Disable function caching so it rebuilds the function each time (to ensure always most recent)

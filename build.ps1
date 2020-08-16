@@ -1,16 +1,15 @@
 $ErrorActionPreference = "Stop"
 
 $mod_name = "taw_am1"
-
-$version = Read-Host "Version Number"
+$unique = (New-Guid).ToString("N")
 
 $start_dir = Get-Location
 $release_parent = "$PSScriptRoot\Release"
-$release_path = "$release_parent\@$mod_name"
+$release_path = "$release_parent\@${mod_name}_local"
 $addons_path = "$PSScriptRoot\addons"
 $release_addons_path = "$release_path\addons"
 $release_keys_path = "$release_path\keys"
-$key_name = "${mod_name}_$version"
+$key_name = "${mod_name}_$unique"
 $include_patterns_path = "$PSScriptRoot\include.txt"
 
 if (Test-Path $release_parent) {

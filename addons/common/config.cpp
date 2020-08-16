@@ -6,12 +6,15 @@ class CfgPatches
 	{
 		name = COMPONENT_NAME;
 		author = "TAW AM1";
-		authors[] = {"Dystroxic", "Constance", "Blackbox", "SillyGhillie"};
+		authors[] = {"Dystroxic"};
 		url = QUOTE(URL);
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			QUOTE(DOUBLES(PREFIX,common))};
+			QUOTE(DOUBLES(PREFIX,main)) // Main addon for this mod, which includes settings and macros
+		};
 		units[] = {};
 		weapons[] = {};
 	};
 };
+
+#include "CfgEventHandlers.hpp"
