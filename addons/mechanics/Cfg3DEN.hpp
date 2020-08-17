@@ -8,7 +8,7 @@ class Cfg3DEN {
                         tooltip = "Has the Crate Filler interaction enabled.";
                         property = QGVAR(isCrateFiller);
                         control = "Checkbox";
-                        expression = QUOTE(if (_value) then {_this setVariable [ARR_3(QQGVAR(isCrateFiller),true,true)];};);
+                        expression = QUOTE(if (_value) then {_this setVariable [ARR_3('%s',true,true)];};);
                         defaultValue = false;
                         condition = "(1 - objectBrain)";
                         typeName = "BOOL";
@@ -17,9 +17,10 @@ class Cfg3DEN {
                         displayName = "Crate Filler Spawn";
                         tooltip = "The variable name of the object that should act as the spawn point for Crate Filler crates.";
                         property = QGVAR(crateFillerSpawn);
-                        control = "EditShort";
-                        expression = QUOTE(if !(_value isEqualTo '') then {_this setVariable [ARR_3(QQGVAR(crateFillerSpawn),_value,true)];};);
-                        defaultValue = "";
+                        control = "EditCode";
+                        defaultValue = "''";
+                        validate = "variable";
+                        expression = QUOTE(if !(_value isEqualTo '') then {_this setVariable [ARR_3('%s',_value,true)];};);
                         condition = "(1 - objectBrain)";
                         typeName = "STRING";
                     };

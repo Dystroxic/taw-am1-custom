@@ -2,6 +2,7 @@
 
 #define MAINPREFIX x
 #define PREFIX taw_am1
+#define PREFIX_BEAUTIFIED TAW AM1
 #define REQUIRED_VERSION 1.98
 #define URL https://github.com/Dystroxic/taw-am1-mod
 

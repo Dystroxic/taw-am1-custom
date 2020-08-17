@@ -16,7 +16,6 @@ class CfgPatches
 			"A3_Weapons_F",
 			"A3_Data_F_Sams_Loadorder", // For patching animations (swim and ladder speed)
 			"ace_arsenal",				// For adding ACE Arsenal event handlers
-			"acre_api",					// For configuring Babel and radio channel presets
 			"ace_grenades",				// For patching smoke/flare items
 			"rhs_c_weapons",			// For patching smoke/flare items
 			"rhsusf_c_weapons",			// For patching smoke/flare items
