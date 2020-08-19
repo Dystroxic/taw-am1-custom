@@ -3,15 +3,16 @@ class Cfg3DEN {
         class AttributeCategories {
             class DOUBLES(PREFIX,attributes) {
                 class Attributes {
-                    class GVAR(isCrateFiller) {
-                        displayName = "Is Crate Filler";
-                        tooltip = "Has the Crate Filler interaction enabled.";
-                        property = QGVAR(isCrateFiller);
-                        control = "Checkbox";
-                        expression = QUOTE(if (_value) then {_this setVariable [ARR_3('%s',true,true)];};);
-                        defaultValue = false;
+                    class GVAR(crateFillerSpawn) {
+                        displayName = "Crate Filler Spawn";
+                        tooltip = "The variable name of the object that should act as the spawn point for Crate Filler crates.";
+                        property = QGVAR(crateFillerSpawn);
+                        control = "EditCode";
+                        defaultValue = "''";
+                        validate = "variable";
+                        expression = QUOTE(if !(_value isEqualTo '') then {_this setVariable [ARR_3('%s',_value,true)];};);
                         condition = "(1 - objectBrain)";
-                        typeName = "BOOL";
+                        typeName = "STRING";
                     };
                     class GVAR(crateFillerSpawn) {
                         displayName = "Crate Filler Spawn";
