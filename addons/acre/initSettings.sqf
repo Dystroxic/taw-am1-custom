@@ -58,6 +58,7 @@
 	{if (!isNil QGVAR(acreChannelsInitialized)) then {call FUNC(initACRE);};} // Script to run on setting change
 ] call CBA_fnc_addSetting;
 
+
 //=================================
 //             BABEL
 //=================================
@@ -71,7 +72,7 @@
 		"Languages that should exist by default." // The tooltip for the setting in the settings menu
 	], 
 	[QUOTE(PREFIX_BEAUTIFIED), "Babel"], // The category in the settings menu
-	"[]", // The default value
+	"[[""en"", ""English""],[""ru"", ""Russian""],[""ar"", ""Arabic""],[""fr"", ""French""],[""gb"", ""Gibberish""]]", // The default value
 	1, // isGlobal, 1 = yes (cannot be overwritten by clients)
 	{
 		[true] call FUNC(initBabel);
@@ -87,7 +88,7 @@
 		"Languages that WEST units should speak by default (unless overwridden by per-unit init)." // The tooltip for the setting in the settings menu
 	], 
 	[QUOTE(PREFIX_BEAUTIFIED), "Babel"], // The category in the settings menu
-	"[]", // The default value
+	"[""en""]", // The default value
 	1, // isGlobal, 1 = yes (cannot be overwritten by clients)
 	{
 		[false, west] call FUNC(initBabel);
@@ -103,7 +104,7 @@
 		"Languages that EAST units should speak by default (unless overwridden by per-unit init)." // The tooltip for the setting in the settings menu
 	], 
 	[QUOTE(PREFIX_BEAUTIFIED), "Babel"], // The category in the settings menu
-	"[]", // The default value
+	"[""ru""]", // The default value
 	1, // isGlobal, 1 = yes (cannot be overwritten by clients)
 	{
 		[false, east] call FUNC(initBabel);
@@ -119,7 +120,7 @@
 		"Languages that INDEPENDENT units should speak by default (unless overwridden by per-unit init)." // The tooltip for the setting in the settings menu
 	], 
 	[QUOTE(PREFIX_BEAUTIFIED), "Babel"], // The category in the settings menu
-	"[]", // The default value
+	"[""fr""]", // The default value
 	1, // isGlobal, 1 = yes (cannot be overwritten by clients)
 	{
 		[false, independent] call FUNC(initBabel);
@@ -135,7 +136,7 @@
 		"Languages that CIVILIAN units should speak by default (unless overwridden by per-unit init)." // The tooltip for the setting in the settings menu
 	], 
 	[QUOTE(PREFIX_BEAUTIFIED), "Babel"], // The category in the settings menu
-	"[]", // The default value
+	"[""gb""]", // The default value
 	1, // isGlobal, 1 = yes (cannot be overwritten by clients)
 	{
 		[false, civilian] call FUNC(initBabel);

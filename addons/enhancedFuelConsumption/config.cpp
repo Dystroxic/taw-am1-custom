@@ -6,14 +6,15 @@ class CfgPatches
 	{
 		name = COMPONENT_NAME;
 		author = "TAW AM1";
-		authors[] = {"Dystroxic"};
+		authors[] = {"Dystroxic", "Killah Potatoes"};
 		url = QUOTE(URL);
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"cba_main"};
+		requiredAddons[] = {
+			QUOTE(DOUBLES(PREFIX,common)) // Main addon for this mod, which includes settings and macros
+		};
 		units[] = {};
 		weapons[] = {};
 	};
 };
 
-#include "Cfg3DEN.hpp"
-#include "Whitelist.hpp"
+#include "CfgEventHandlers.hpp"

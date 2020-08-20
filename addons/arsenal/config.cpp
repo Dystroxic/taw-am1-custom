@@ -9,11 +9,13 @@ class CfgPatches
 		authors[] = {"Dystroxic"};
 		url = QUOTE(URL);
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"cba_main"};
+		requiredAddons[] = {
+			QUOTE(DOUBLES(PREFIX,common)), // Main addon for this mod, which includes settings and macros
+			"ace_arsenal"				// For adding ACE Arsenal event handlers
+		};
 		units[] = {};
 		weapons[] = {};
 	};
 };
 
-#include "Cfg3DEN.hpp"
-#include "Whitelist.hpp"
+#include "CfgEventHandlers.hpp"
