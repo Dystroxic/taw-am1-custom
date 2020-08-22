@@ -7,3 +7,5 @@
 	#undef PREP
 	#define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 #endif
+
+#define PATHTO_COMPONENT \MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT
