@@ -1,7 +1,7 @@
 
 // Add the CBA setting for which items should be blacklisted
 [
-	QGVAR(globalBlacklist), // The setting's name (also the global variable name)
+	QGVAR(globalBlacklistBase), // The setting's name (also the global variable name)
 	"EDITBOX", // The setting type
 	[
 		"Global Blacklist", // The setting display name in the settings menu
@@ -12,13 +12,24 @@
 	1, // isGlobal, 1 = yes (cannot be overwritten by clients)
 	// Script to run on setting change
 	{
-		diag_log format["Arsenal blacklist changed, new value: %1", _this];
-		// filter out non-string and empty-string items in the array
-		GVAR(globalBlacklist) = ([_this] call EFUNC(common,parseArray)) select {_x isEqualType "" && {_x != ""}};
-		// If Crate Filler has been loaded, re-generate the asset lists
-		if (!isNil QEGVAR(crateFiller,crateFillerCrates) && {!(EGVAR(crateFiller,crateFillerCrates) isEqualType "")}) then {
-			[] call KPCF_fnc_getItems;
-		};
+		[_this, GVAR(blacklistVanillaCSW)] call FUNC(updateGlobalBlacklist);
+	}
+] call CBA_fnc_addSetting;
+
+// Add the CBA setting for which items should be blacklisted
+[
+	QGVAR(blacklistVanillaCSW), // The setting's name (also the global variable name)
+	"CHECKBOX", // The setting type
+	[
+		"Blacklist Vanilla Gunbags", // The setting display name in the settings menu
+		"Blacklist vanilla backpack gunbags, since they have been replaced by ACE Crew Served Weapons." // The tooltip for the setting in the settings menu
+	], 
+	[QUOTE(PREFIX_BEAUTIFIED), "Arsenal"], // The category in the settings menu
+	false, // The default value
+	1, // isGlobal, 1 = yes (cannot be overwritten by clients)
+	// Script to run on setting change
+	{
+		[GVAR(globalBlacklistBase), _this] call FUNC(updateGlobalBlacklist);
 	}
 ] call CBA_fnc_addSetting;
 

@@ -80,6 +80,7 @@ class cfgWeapons {
 		author="Blackbox";
 		displayName="TAR-21 (Black)";
 		baseWeapon=QGVAR(tar21_blk);
+		hiddenSelections[]={"camo"};
 		hiddenSelectionsTextures[]=
 		{
 			PATHTOF(assets\tar21_gy.paa)

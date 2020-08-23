@@ -10,7 +10,9 @@ class CfgPatches
 		url = QUOTE(URL);
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			QUOTE(DOUBLES(PREFIX,common)) // Main addon for this mod, which includes settings and macros
+			QUOTE(DOUBLES(PREFIX,common)), // Main addon for this mod, which includes settings and macros
+			"rhs_c_weapons",			// For patching grenades
+			"rhsusf_c_weapons"			// For patching grenades
 		};
 		units[] = {};
 		weapons[] = {
@@ -48,3 +50,4 @@ class CfgPatches
 };
 
 #include "CfgWeapons.hpp"
+#include "CfgAmmo.hpp"
