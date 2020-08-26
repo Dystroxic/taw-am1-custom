@@ -71,8 +71,8 @@ if (!isNil "_cfgMarkerColor"&& {isClass (configFile >> "CfgMarkerColors" >> _cfg
 	_markerColor = _cfgMarkerColor;
 };
 
-// Default the tagger ID to be 0 (for single player)
-private _taggerID = 0;
+// Default the tagger ID to be the player UID
+private _taggerID = getPlayerUID _unitThatCreated;
 // Check to see if there's tracking of the player connection data
 if (!isNil QEGVAR(common,playerConnectedData)) then {
 	// Get the player data from the namespace
