@@ -71,10 +71,23 @@ if (!isNil "_cfgMarkerColor"&& {isClass (configFile >> "CfgMarkerColors" >> _cfg
 	_markerColor = _cfgMarkerColor;
 };
 
+// Default the tagger ID to be 0 (for single player)
+private _taggerID = 0;
+// Check to see if there's tracking of the player connection data
+if (!isNil QEGVAR(common,playerConnectedData)) then {
+	// Get the player data from the namespace
+	private _playerData = EGVAR(common,playerConnectedData) getVariable (getPlayerUID _unitThatCreated);
+	// Ensure that the right number of fields is set
+	if (count _playerData >= 5) then {
+		// Extract the _idstr field
+		_taggerID = _playerData select 5;
+	};
+};
+
 // Increment the marker number
 INC(GVAR(markerNumber));
 // Create a unique name for the marker that allows it to be deleted and is in the correct side
-private _markerName = format ["_USER_DEFINED #%1/%2/%3", getPlayerUID _unitThatCreated, GVAR(markerNumber), 1];
+private _markerName = format ["_USER_DEFINED #%1/%2/%3", _taggerID, GVAR(markerNumber), 1];
 // Create the marker
 private _marker = createMarker [_markerName, _markerPos];
 // Set its attributes

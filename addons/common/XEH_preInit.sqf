@@ -8,3 +8,7 @@ PREP_RECOMPILE_END;
 
 ADDON = true;
 
+// Track the logged in players and their DirectPlay IDs (used for map markers)
+if (isServer) then {
+	addMissionEventHandler ["PlayerConnected", FUNC(playerConnected)];
+};
