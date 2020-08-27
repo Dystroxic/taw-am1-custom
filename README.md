@@ -2,4 +2,6 @@
 Custom mechanics and assets for TAW AM1
 
 TODO:
-- change arsenal blacklist to wrap a function from ACE arsenal instead of using a display handler (so it works with Liberation arsenal)
+- replace FAK with ACE medical
+- improve war crimes notifications to handle restrained civilians
+- improve war crimes to track war crime count

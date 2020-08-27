@@ -14,12 +14,8 @@
 
 #include "../../script_component.hpp"
 
-diag_log "Trying Crate Filler initialization...";
-
 // Only run, when we've a real player
 if (hasInterface && GVAR(enabled)) then {
-
-    diag_log "Running Crate Filler initialization...";
 
     // Read the variables
     [] call compile preprocessFileLineNumbers QPATHTO_C(KPCF\variables.sqf);

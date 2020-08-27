@@ -23,6 +23,6 @@ if (isNil QGVAR(playerConnectedData)) then {
 
 diag_log format["Player connected: %1", _this];
 // If the UID is set (it's not the server connecting to itself), save the data
-if (_uid isEqualTo "") then {
+if !(_uid isEqualTo "") then {
 	GVAR(playerConnectedData) setVariable [_uid, _this];
 };
